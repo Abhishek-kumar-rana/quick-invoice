@@ -1,0 +1,171 @@
+/* ================= PAGE ================= */
+.dashboard {
+  min-height: 100vh;
+  padding: 24px;
+  background: #f8fafc;
+  font-family: Inter, Arial, sans-serif;
+}
+
+/* ================= HEADER ================= */
+.dashboard-header {
+  margin-bottom: 20px;
+}
+
+.dashboard-header h2 {
+  font-size: 24px;
+  margin-bottom: 4px;
+}
+
+.dashboard-header p {
+  color: #64748b;
+}
+
+/* ================= LOADING / EMPTY ================= */
+.loader,
+.empty-state {
+  padding: 40px;
+  text-align: center;
+  color: #64748b;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content:space-evenly;
+  gap: 12px;
+}
+
+.noInv {
+  /* background: #000; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* ================= GRID ================= */
+.invoice-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+
+/* ================= NEW INVOICE CARD ================= */
+.new-invoice {
+  min-height: 220px;
+  border: 2px dashed #cbd5e1;
+  border-radius: 16px;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.new-invoice:hover {
+  border-color: #2563eb;
+  background: #f1f5f9;
+}
+
+.plus-icon {
+  font-size: 42px;
+  color: #2563eb;
+  margin-bottom: 6px;
+}
+
+/* ================= INVOICE CARD ================= */
+.invoice-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 14px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.invoice-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.14);
+}
+
+/* ================= CARD HEADER ================= */
+.invoice-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.invoice-number {
+  font-weight: 600;
+  font-size: 14px;
+  color: #0f172a;
+}
+
+.template-pill {
+  font-size: 11px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: #e0e7ff;
+  color: #3730a3;
+  font-weight: 500;
+}
+
+/* ================= PREVIEW ================= */
+.invoice-preview {
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 8px;
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8fafc;
+}
+
+.invoice-preview img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.no-preview {
+  font-size: 13px;
+  color: #94a3b8;
+}
+
+/* ================= CARD FOOTER ================= */
+.invoice-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.invoice-title {
+  font-size: 14px;
+  font-weight: 500;
+  color: #334155;
+  max-width: 65%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.invoice-date {
+  font-size: 12px;
+  color: #64748b;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 480px) {
+  .dashboard {
+    padding: 16px;
+  }
+  .loader,
+  .empty-state {
+    flex-direction: column;
+  }
+}

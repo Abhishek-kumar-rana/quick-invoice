@@ -1,0 +1,17 @@
+<svg width="800" height="1100" viewBox="0 0 800 1100" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="1100" fill="#ffffff"></rect>
+  
+  <text x="50" y="80" font-size="36" font-weight="bold">Your Name</text>
+  <text x="50" y="115" font-size="18" fill="#555">Software Engineer</text>
+
+  <line x1="50" y1="140" x2="750" y2="140" stroke="#ddd"></line>
+
+  <text x="50" y="190" font-size="22" font-weight="bold">Profile</text>
+  <rect x="50" y="210" width="700" height="60" fill="#eee"></rect>
+
+  <text x="50" y="320" font-size="22" font-weight="bold">Experience</text>
+  <rect x="50" y="340" width="700" height="200" fill="#eee"></rect>
+
+  <text x="50" y="590" font-size="22" font-weight="bold">Education</text>
+  <rect x="50" y="610" width="700" height="120" fill="#eee"></rect>
+</svg>

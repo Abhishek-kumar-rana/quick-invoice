@@ -1,0 +1,28 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+  font-family:  "schibsted grotesk", "urbanist", sans-serif;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+@keyframes spin {
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
+.spin-animation {
+  animation: spin 1s linear infinite;
+}
+
+.invoiceform input:focus,
+.invoiceform textarea:focus,
+.invoiceform select:focus {
+  /* outline: none;
+  border-color: #61dafb;
+  box-shadow: 0 0 5px rgba(97, 218, 251, 0.5); */
+  box-shadow: none !important;
+}

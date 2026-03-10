@@ -1,0 +1,193 @@
+.invoice-wrapper {
+  max-width: 900px;
+  margin: auto;
+  padding: 12px;
+  font-family: system-ui;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 6px 8px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+textarea {
+  resize: none;
+  min-height: 60px;
+}
+
+.invoice-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.logo-upload img {
+  width: 90px;
+  cursor: pointer;
+}
+
+.invoice-dates {
+  display: grid;
+  gap: 6px;
+  max-width: 220px;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 12px;
+  margin-top: 20px;
+  /* border: 1px solid #e3e3e3; */
+}
+
+
+
+.items-box {
+  margin-bottom: 12px;
+}
+
+.items-head, .items-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr auto;
+  gap: 6px;
+  align-items: center;
+}
+
+.items-head {
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.items-row button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: red;
+}
+
+.add-btn {
+  margin-top: 6px;
+  background: #eee;
+  border: none;
+  padding: 6px;
+  border-radius: 6px;
+}
+
+.bank-details {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 2px;
+}
+
+.input-group {
+  position: relative;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+  outline: none;
+}
+
+.input-group textarea {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+  outline: none;
+}
+
+
+.input-group label {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: white;
+  padding: 0 6px;
+  color: #777;
+  font-size: 14px;
+  pointer-events: none;
+  transition: all 0.25s ease;
+}
+
+/* When input is focused or has value */
+.input-group input:focus + label,
+.input-group input:not(:placeholder-shown) + label {
+  top: -3px;
+  font-size: 12px;
+  color: #909091;
+  border-radius: 5px;
+}
+
+/* Optional focus border */
+.input-group input:focus {
+  border-color: #797a7a;
+}
+
+.input-group textarea:focus + label,
+.input-group textarea:not(:placeholder-shown) + label {
+  top: -3px;
+  font-size: 12px;
+  color: #909091;
+  border-radius: 5px;
+}
+
+/* Optional focus border */
+.input-group textarea:focus {
+  border-color: #797a7a;
+}
+
+.summary {
+  background: #fafafa;
+  padding: 8px;
+  border-radius: 6px;
+  font-size: 14px;
+  border: 1px solid #e3e3e3;
+}
+
+.tax {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.submit-btn {
+  margin-top: 12px;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background: #4f46e5;
+  color: white;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+/* 🔥 RESPONSIVE */
+@media (max-width: 600px) {
+  .invoice-header,
+  .grid-2 {
+    grid-template-columns: 1fr;
+    flex-direction: column;
+  }
+
+  .items-head {
+    display: none;
+  }
+
+  .items-row {
+    grid-template-columns: 1fr 1fr;
+    gap: 6px;
+  }
+}

@@ -1,0 +1,113 @@
+.alt-section {
+  padding: 40px 0;
+  background: #ffffff;
+}
+
+.alt-title {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #111827;
+  text-align: center;
+}
+
+/* ITEM */
+.alt-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  margin-bottom: 40px;
+
+  opacity: 0;
+  transform: translateY(200px);
+  transition: all 0.7s ease;
+}
+
+.alt-item.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Reverse for desktop */
+.alt-item.reverse {
+  flex-direction: row-reverse;
+}
+
+/* IMAGE (NO background change) */
+.alt-image img {
+  max-height: 240px;
+  width: 100%;
+  object-fit: contain;
+  border-radius: 14px;
+  box-shadow: 0 16px 40px rgba(0,0,0,0.12);
+
+  transform: scale(0.92);
+  transition: transform 0.7s ease;
+}
+
+.alt-item.show .alt-image img {
+  transform: scale(1);
+}
+
+/* CONTENT */
+.alt-content {
+  max-width: 420px;
+}
+
+.alt-content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #111827;
+}
+
+.alt-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.alt-content li {
+  font-size: 0.95rem;
+  margin-bottom: 6px;
+  color: #374151;
+  position: relative;
+  padding-left: 18px;
+}
+
+.alt-content li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #4f46e5;
+  font-weight: 600;
+}
+
+/* ✅ MOBILE RESPONSIVE FIX */
+@media (max-width: 768px) {
+  .alt-item,
+  .alt-item.reverse {
+    flex-direction: column;      /* 🔥 stack image + text */
+    gap: 20px;                   /* tighter spacing */
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .alt-image img {
+    max-height: 200px;           /* 🔥 smaller image on mobile */
+  }
+
+  .alt-content {
+    max-width: 100%;
+  }
+
+  .alt-content li {
+    padding-left: 0;
+  }
+
+  .alt-content li::before {
+    display: none;               /* cleaner mobile */
+  }
+
+  .alt-title {
+    font-size: 1.7rem;
+  }
+} 
