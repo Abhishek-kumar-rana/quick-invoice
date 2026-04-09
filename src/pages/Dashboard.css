@@ -169,3 +169,88 @@
     flex-direction: column;
   }
 }
+
+
+/* ================= SKELETON LOADING ================= */
+
+.skeleton {
+  position: relative;
+  overflow: hidden;
+  background: #e2e8f0;
+  border-radius: 8px;
+}
+
+/* shimmer animation */
+.skeleton::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -150px;
+  height: 100%;
+  width: 150px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.6),
+    transparent
+  );
+  animation: shimmer 1.2s infinite;
+}
+
+@keyframes shimmer {
+  100% {
+    left: 100%;
+  }
+}
+
+/* card skeleton */
+.skeleton-card {
+  pointer-events: none;
+}
+
+/* text lines */
+.skeleton-text {
+  height: 14px;
+  width: 70%;
+}
+
+.skeleton-text.small {
+  width: 40%;
+  height: 12px;
+}
+
+/* pill */
+.skeleton-pill {
+  width: 60px;
+  height: 20px;
+  border-radius: 999px;
+}
+
+/* preview box */
+.invoice-preview.skeleton {
+  height: 160px;
+  border-radius: 12px;
+}
+
+/* ================= RESPONSIVE IMPROVEMENT ================= */
+
+@media (max-width: 768px) {
+  .invoice-preview.skeleton {
+    height: 140px;
+  }
+}
+
+@media (max-width: 480px) {
+  .invoice-preview.skeleton {
+    height: 120px;
+  }
+
+  .skeleton-text {
+    width: 80%;
+  }
+
+  .skeleton-text.small {
+    width: 50%;
+  }
+}
+

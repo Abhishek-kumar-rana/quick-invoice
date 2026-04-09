@@ -1,4 +1,4 @@
-import  { useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { getInvoicesService } from "../service/InvoiceService";
 import toast from "react-hot-toast";
 import { AppContext, initialInvoiceData } from "../context/AppContext";
@@ -52,11 +52,27 @@ const Dashboard = () => {
 
       {/* CONTENT */}
       {loading ? (
-        <div className="loader">Loading invoices...</div>
+        <div className="invoice-grid">
+          {[...Array(6)].map((_, i) => (
+            <div className="invoice-card skeleton-card" key={i}>
+              <div className="invoice-card-header">
+                <div className="skeleton skeleton-text small"></div>
+                <div className="skeleton skeleton-pill"></div>
+              </div>
+
+              <div className="invoice-preview skeleton"></div>
+
+              <div className="invoice-card-footer">
+                <div className="skeleton skeleton-text"></div>
+                <div className="skeleton skeleton-text small"></div>
+              </div>
+            </div>
+          ))}
+        </div>
       ) : invoices.length === 0 ? (
         <div className="empty-state">
           <div className="invoice-grid">
-             <div className=" " onClick={handleCreateNewInvoice}>
+            <div className=" " onClick={handleCreateNewInvoice}>
               <div className="new-invoice">
                 <FiPlus className="plus-icon" />
                 <div className="">New Invoice</div>
