@@ -3,7 +3,7 @@ import './App.css'
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import { Toaster } from 'react-hot-toast';
-import LandingPage from './pages/Landingpage/Landingpage';
+import LandingPage from '@/pages/Landingpage/LandingPage';
 import Dashboard from './pages/Dashboard';
 import MainPage from './pages/MainPage';
 import PreviewPage from './pages/PreviewPage';
