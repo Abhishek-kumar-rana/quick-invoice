@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import "./AnimatedShowcase.css";
-import { assets } from "../../assets/assets";
+import { assets } from "@/assets/assets";
 
 const AnimatedShowcase = () => {
   useEffect(() => {
