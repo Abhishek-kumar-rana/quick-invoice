@@ -1,6 +1,6 @@
 import "./LandingPage.css";
 import AnimatedShowcase from "./AnimatedShowcase";
-import Logo from "../../components/Logo";
+import Logo from "@/components/Logo";
 import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope } from "react-icons/fa";
 
 const LandingPage = () => {
