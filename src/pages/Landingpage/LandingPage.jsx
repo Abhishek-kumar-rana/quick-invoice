@@ -1,6 +1,4 @@
-import React from "react";
 import "./LandingPage.css";
-import { assets } from "../../assets/assets";
 import AnimatedShowcase from "./AnimatedShowcase";
 import Logo from "../../components/Logo";
 import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope } from "react-icons/fa";

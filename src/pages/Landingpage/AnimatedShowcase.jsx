@@ -1,5 +1,4 @@
-import React, { useEffect } from "react";
-// import { assets } from "./../../assets/assets";
+import { useEffect } from "react";
 import "./AnimatedShowcase.css";
 import { assets } from "../../assets/assets";
 
