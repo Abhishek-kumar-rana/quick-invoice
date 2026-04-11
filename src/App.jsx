@@ -10,9 +10,24 @@ import PreviewPage from './pages/PreviewPage';
 import MenuBar from './components/MenuBar';
 import UserSyncHandler from './components/UserSyncHandler';
 import { RedirectToSignIn, SignedIn, SignedOut, SignIn } from '@clerk/clerk-react';
+import useServerWakeUp from './hooks/useServerWakeUp';
 
 
 const App = () => {
+
+  const {isServerAwake, loading} = useServerWakeUp();
+
+  if (loading) {
+  return (
+    <div className="server-loader">
+      <div className="spinner"></div>
+      <p>Waking up server... please wait ⏳</p>
+    </div>
+  );
+}
+
+
+
   return (
      <BrowserRouter>
      <UserSyncHandler />

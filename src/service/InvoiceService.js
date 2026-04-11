@@ -28,7 +28,7 @@ export const getInvoicesService = async (baseURL, token) => {
             Authorization: `Bearer ${token}`
         }
     });
-    console.log("getInvoicesService response:", res);
+    // console.log("getInvoicesService response:", res);
     return res;
 }
 

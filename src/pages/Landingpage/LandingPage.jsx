@@ -2,18 +2,19 @@ import "./LandingPage.css";
 import AnimatedShowcase from "./AnimatedShowcase";
 import Logo from "@/components/Logo";
 import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const LandingPage = () => {
 
-   const Item = ({ img, title, desc }) => (
-  <div className="compact-item">
-    <img src={img} alt={title} />
-    <div className="compact-content">
-      <h3>{title}</h3>
-      <p>{desc}</p>
+  const Item = ({ img, title, desc }) => (
+    <div className="compact-item">
+      <img src={img} alt={title} />
+      <div className="compact-content">
+        <h3>{title}</h3>
+        <p>{desc}</p>
+      </div>
     </div>
-  </div>
-);
+  );
 
 
   return (
@@ -33,8 +34,12 @@ const LandingPage = () => {
               with confidence.
             </p>
             <div className="actions">
-              <button className="btn primary">Get Started Free</button>
-              <button className="btn secondary">View Demo</button>
+              <Link to="/generate" className="btn primary">
+                Get Started Free
+              </Link>
+              <a href="#animated-showcase" className="btn secondary">
+                View Demo
+              </a>
             </div>
           </div>
 
@@ -77,68 +82,72 @@ const LandingPage = () => {
       </section>
 
       {/* /////////////////// */}
-    <AnimatedShowcase />
+      <div id="animated-showcase">
+        </div>
+        <AnimatedShowcase  />
 
       {/* CTA */}
       <section className="cta">
         <h2>Start Invoicing Smarter Today</h2>
         <p>No credit card required. Free plan available.</p>
-        <button className="btn primary">Create Free Invoice</button>
+        <Link to="/generate" className="btn primary">
+          Create Free Invoice
+        </Link>
       </section>
 
       {/* FOOTER */}
 
-<footer className="footer">
-  <div className="footer-container">
+      <footer className="footer">
+        <div className="footer-container">
 
-    {/* LEFT */}
-    <div className="footer-left">
-      <Logo x={30} y={30} />
-      <p>
-        © {new Date().getFullYear()} Invoice Generator. <br />
-        Built by a Freelance Developer.
-      </p>
-    </div>
+          {/* LEFT */}
+          <div className="footer-left">
+            <Logo x={30} y={30} />
+            <p>
+              © {new Date().getFullYear()} Invoice Generator. <br />
+              Built by a Freelance Developer.
+            </p>
+          </div>
 
-    {/* RIGHT - SOCIAL ICONS */}
-    <div className="footer-socials">
-      <a
-        href="https://github.com/yourusername"
-        target="_blank"
-        rel="noreferrer"
-        aria-label="GitHub"
-      >
-        <FaGithub />
-      </a>
+          {/* RIGHT - SOCIAL ICONS */}
+          <div className="footer-socials">
+            <a
+              href="https://github.com/yourusername"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="GitHub"
+            >
+              <FaGithub />
+            </a>
 
-      <a
-        href="https://www.linkedin.com/in/yourusername"
-        target="_blank"
-        rel="noreferrer"
-        aria-label="LinkedIn"
-      >
-        <FaLinkedin />
-      </a>
+            <a
+              href="https://www.linkedin.com/in/yourusername"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="LinkedIn"
+            >
+              <FaLinkedin />
+            </a>
 
-      <a
-        href="https://twitter.com/yourusername"
-        target="_blank"
-        rel="noreferrer"
-        aria-label="Twitter"
-      >
-        <FaTwitter />
-      </a>
+            <a
+              href="https://twitter.com/yourusername"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Twitter"
+            >
+              <FaTwitter />
+            </a>
 
-      <a
-        href="mailto:yourmail@gmail.com"
-        aria-label="Email"
-      >
-        <FaEnvelope />
-      </a>
-    </div>
+            <a
+              href="mailto:yourmail@gmail.com"
+              aria-label="Email"
+            >
+              <FaEnvelope />
+            </a>
+          </div>
 
-  </div>
-</footer>
+        </div>
+      </footer>
 
     </div>
   );

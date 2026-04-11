@@ -23,7 +23,7 @@ const UserSyncHandler = () => {
                 lastName: user.lastName,
                 photoUrl: user.imageUrl,
         }
-        console.log("Saving user data to backend:", userData);
+        // console.log("Saving user data to backend:", userData);
          await
         axios.post(`${baseURL}/users`, userData,  {
             headers: {
